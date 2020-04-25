@@ -1,0 +1,110 @@
+.featured{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-image: $shade;
+    background-attachment: fixed;
+    padding: 1.5rem;
+
+    @media only screen and (max-width:37.5em){
+        height: 100vh;
+    }
+
+    &__title{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    &__cover{
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        cursor: pointer;
+       
+    }
+
+    &__photo{
+        margin-right: 0.5rem;
+        box-shadow: 0 0 4rem rgba(black,0.4);
+        transition: all 300ms;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__buttons{
+        .btn{
+            margin-bottom: 1rem;
+        }
+    }
+
+    // VERSIONS
+
+    &--1{
+        background-image: $shade,url(/img/bg2-min.jpg);
+    }
+
+    &--2{
+        position: absolute;
+        top: 0;
+        background-image: $shade,url(/img/bg1-min.jpg);
+        background-position: bottom;
+        color: white;
+        opacity: 0;
+        pointer-events: none;
+
+         animation: fade 10s ease forwards 10s infinite alternate,
+
+    }
+    
+    &--3{
+        position: absolute;
+        top: 0;
+        background-image: $shade,url(/img/bg3-min.png);
+        background-position: bottom;
+        color: white;
+        opacity: 0;
+        pointer-events: none;
+
+        animation: fade 5s ease 20s forwards infinite alternate;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+// ANIMATION
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    100%{
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}

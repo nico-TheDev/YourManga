@@ -1,0 +1,40 @@
+.footer{
+    background-color: white;
+    padding: 2rem 0;
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 1rem;
+
+        @media only screen and (max-width:37.5em){
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+        }
+    }
+
+
+    &__item{
+        margin-bottom: 1rem;
+    }
+
+    &__icon{
+        fill: currentColor;
+    }
+
+    &__copyright{
+        font-size: 0.9rem;
+        align-self: end;
+        color: $color-primary-2;
+    }
+
+    &__link{
+        color: $color-primary-2;
+
+        &:hover{
+            color:$color-primary-4;
+        }
+    }
+
+}
