@@ -23,6 +23,7 @@
     &__logo{
         font-family: $special-font;
         background-image: linear-gradient(to bottom right,$color-primary-1,$color-primary-4);
+        -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         font-size: 2rem;

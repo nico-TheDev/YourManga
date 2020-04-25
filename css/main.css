@@ -179,6 +179,7 @@ li {
   font-family: "Righteous", sans-serif;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ACCCFF), to(#002B6E));
   background-image: linear-gradient(to bottom right, #ACCCFF, #002B6E);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-size: 2rem;
@@ -295,6 +296,7 @@ li {
 
 .footer__icon {
   fill: currentColor;
+  margin-right: 1rem;
 }
 
 .footer__copyright {
